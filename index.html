@@ -4,91 +4,102 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: "Times New Roman", Georgia, Serif;}
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display";
-  letter-spacing: 5px;
-}
-th {
-  text-align: left; 
-}
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-    
-.mobile-container {
-  max-width: 480px;
-  margin: auto;
-  background-color: #555;
-  height: 500px;
-  color: white;
-  border-radius: 10px;
-}
-
-@media only screen and (max-width: 600px)
-{
-    .topnav {
-      overflow: hidden;
-      background-color: #333;
-      position: relative;
+    body {
+        font-family: "Times New Roman", Georgia, Serif;
     }
 
-    .topnav #myLinks {
-      display: none;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Playfair Display";
+        letter-spacing: 5px;
     }
 
-    .topnav a {
-      color: white;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-      display: block;
+    th {
+        text-align: left;
     }
 
-    .topnav a.icon {
-      background: black;
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 0;
+    .vertical-center {
+        margin: 0;
+        position: absolute;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
     }
 
-    .topnav a:hover {
-      background-color: #ddd;
-      color: black;
+
+    .mobile-container {
+        max-width: 480px;
+        margin: auto;
+        background-color: #555;
+        height: 500px;
+        color: white;
+        border-radius: 10px;
     }
 
-    .active {
-      background-color: #4CAF50;
-      color: white;
+    @media only screen and (max-width: 600px) {
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            position: relative;
+        }
+
+        .topnav #myLinks {
+            display: none;
+        }
+
+        .topnav a {
+            color: white;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            display: block;
+        }
+
+        .topnav a.icon {
+            background: black;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .active {
+            background-color: #4CAF50;
+            color: white;
+        }
     }
-}
-    
-.google-maps {
+
+    .google-maps {
         position: relative;
         padding-bottom: 185%; // This is the aspect ratio
         height: 0;
         overflow: hidden;
     }
 
-.google-maps iframe {
+    .google-maps iframe {
         position: absolute;
         top: 0;
         left: 0;
         width: 100% !important;
         height: 100% !important;
-    }    
+    }
+
 </style>
+
 <body>
 
-<!-- Navbar (sit on top) -->
-<!--<div class="w3-top">
+    <!-- Navbar (sit on top) -->
+    <!--<div class="w3-top">
   <div class="w3-bar w3-light-grey w3-padding w3-card" style="letter-spacing:4px;">
     <a href="#home" class="w3-bar-item w3-button">Restaurant Name</a>
     <!-- Right-sided navbar links. Hide them on small screens ->
@@ -100,180 +111,203 @@ th {
   </div>
 </div>-->
 
-<div class="w3-top aos-animate">
-  <div class="w3-bar w3-light-grey" style="" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#home" class="w3-bar-item w3-button">Restaurant Name</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-right">About</a>
-    <a href="#menu" class="w3-bar-item w3-button w3-hide-small w3-right">Menu</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-right">Contact</a>
-  </div>
-	<script>
-		$('button').click(function() {
-			var element = $(this);
-			var tmpClass = element.attr('class');
-			element.removeClass();
-			setTimeout(function() {
-				element.offsetWidth = element.offsetWidth;
-				element.addClass(tmpClass).addClass('start-now');
-			}, 10);
-		});
-        
-        // Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
-	
-	
-	//jsfiddle way to change navbar color
-	(function () 
-	 {
-  	(document).scroll(function () {
-	  var nav = $("myNavbar");
-	 	 nav.toggleClass("w3-bar" + " w3-card" + " w3-animate-top" + " w3-white", (this).scrollTop() > nav.height());
-	});
-});
+    <div class="w3-top aos-animate">
+        <div class="w3-bar w3-light-grey" style="" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#home" class="w3-bar-item w3-button">Restaurant Name</a>
+            <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-right">About</a>
+            <a href="#menu" class="w3-bar-item w3-button w3-hide-small w3-right">Menu</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-right">Contact</a>
+        </div>
+        <script>
+            $('button').click(function() {
+                var element = $(this);
+                var tmpClass = element.attr('class');
+                element.removeClass();
+                setTimeout(function() {
+                    element.offsetWidth = element.offsetWidth;
+                    element.addClass(tmpClass).addClass('start-now');
+                }, 10);
+            });
 
-	</script>
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button w3-right" style="text-align: right;" onclick="toggleFunction()">About</a>
-    <a href="#menu" class="w3-bar-item w3-button w3-right" style="text-align: right;" onclick="toggleFunction()">Menu</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-right" style="text-align: right;" onclick="toggleFunction()">Contact</a>
-  </div>
-</div>
-    
-<script>
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-    
-    // Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
+            // Change style of navbar on scroll
+            window.onscroll = function() {
+                myFunction()
+            };
 
-</script>
-    
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
-  <img class="w3-image w3-center" src="https://i.imgur.com/Zx6K8Hf.jpg" alt="Hamburger Catering" width="1600" height="800">
-  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-    <h1 class="w3-xxlarge">Restaurant Name</h1>
-  </div>
-</header>
+            function myFunction() {
+                var navbar = document.getElementById("myNavbar");
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+                } else {
+                    navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+                }
+            }
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:1100px">
 
-  <!-- About Section -->
-  <div class="w3-row w3-padding-64" id="about">
-      
-    <div class="w3-col m6 w3-padding-large">
-     <img src="https://i.imgur.com/dFbIx1O.jpg" class="w3-round w3-center w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+            //jsfiddle way to change navbar color
+            (function() {
+                (document).scroll(function() {
+                    var nav = $("myNavbar");
+                    nav.toggleClass("w3-bar" + " w3-card" + " w3-animate-top" + " w3-white", (this).scrollTop() > nav.height());
+                });
+            });
+
+        </script>
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+            <a href="#about" class="w3-bar-item w3-button w3-right" style="text-align: right;" onclick="toggleFunction()">About</a>
+            <a href="#menu" class="w3-bar-item w3-button w3-right" style="text-align: right;" onclick="toggleFunction()">Menu</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-right" style="text-align: right;" onclick="toggleFunction()">Contact</a>
+        </div>
     </div>
 
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">About Us</h1><br>
-      <h5 class="w3-center">Our tradition since 2005</h5>
-      <p class="w3-large">Our restaurant was founded in Detroit, Michigan by your name, Since the restuarant wsas founded, we have been serving Detroiters and visitors with nothing but  <span class="w3-tag w3-light-grey">fresh</span> ingredients sourced from local farmers. We look forward welcoming you to our family</p>
-      <p class="w3-large w3-text-grey w3-hide-medium">Since we started we have been contributing to our comunity by....</p>
-    </div>
-  </div>
-  
-  <hr>
-  
-  <!-- Menu Section -->
-  <div class="w3-row w3-padding-64" id="menu">
-      
-    <div class="w3-col m6 w3-mobile w3-padding-large">
-      <h1 class="w3-center">Our Menu</h1><br>
-      <h4>Bread Basket</h4>
-      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p>
-    
-      <h4>Honey Almond Granola with Fruits</h4>
-      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
-    
-      <h4>Belgian Waffle</h4>
-      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p>
-    
-      <h4>Scrambled eggs</h4>
-      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
-    
-      <h4>Blueberry Pancakes</h4>
-      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>  
-        <br>
-        <p><button class="w3-button w3-light-grey w3-section w3-center">VIEW COMPLETE MENU</button></p>    
-    </div>
-    
-    <div class="w3-col m6 w3-mobile w3-padding-large w3-center">
-      <img src="https://i.imgur.com/8fTM158.jpg" class="w3-round w3-image w3-center w3-opacity-min" alt="Menu" style="width:100%">
-    </div>
-  </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
 
-  <hr>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
 
-  <!-- Contact Section -->
-  <div class="w3-row w3-padding-64" id="contact">
-      
-    <div class="w3-col m6 w3-padding-large w3-mobile">
- 
+    </script>
 
-<div class="google-maps">
+    <!-- Header -->
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+        <img class="w3-image w3-center" src="https://i.imgur.com/Zx6K8Hf.jpg" alt="Hamburger Catering" width="1600" height="800">
+        <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+            <h1 class="w3-xxlarge">Restaurant Name</h1>
+        </div>
+    </header>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2052.751904875937!2d-83.04762080473643!3d42.33163422278227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d3026939623%3A0x4f5c273e480fd763!2sThe%20Rink%20At%20Campus%20Martius%20Park!5e1!3m2!1sen!2sus!4v1611554587490!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:1100px">
 
-</div>        
-        <!--<div class="mapouter"><div class="gmap_canvas"><iframe width="502" height="752" id="gmap_canvas" src="https://maps.google.com/maps?q=1544%20E%20Lafayette%20St,%20Detroit,%20MI%2048207&t=k&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org">putlocker</a><br><style>.mapouter{position:relative;text-align:right;height:752px;width:502px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:752px;width:502px;}</style></div></div>-->
-    </div>
+        <!-- About Section -->
+        <div class="w3-row w3-padding-64" id="about">
 
-    <div class="w3-col m6 w3-padding-large w3-mobile">
-        <h1>Contact</h1><br>
-        <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
-        <p class="w3-text-blue-grey w3-large"><b>restaurant, 555 lafayatte St, Detroit, MI 44444</b></p>
-        <p>You can contact us by phone <a href="tel:555-555-5555">(555) 555-5555</a> or email <a href = "mailto: help@restaurant.com">help@restaurant.com</a>, or you can send us a message here:</p>
-        
-        <h3>Hours:</h3>
-        <table>
-            <tr><th>Mon: </th><td>&ensp;9am - 5pm</td></tr>
-            <tr><th>Tue: </th><td>&ensp;9am - 5pm</td></tr>
-            <tr><th>Wed: </th><td>&ensp;9am - 5pm</td></tr>
-            <tr><th>Thu: </th><td>&ensp;9am - 5pm</td></tr>
-            <tr><th>Fri: </th><td>&ensp;9am - 5pm</td></tr>
-            <tr><th>Sat: </th><td>&ensp;9am - 5pm</td></tr>
-            <tr><th>Sun: </th><td>&ensp;Closed</td></tr>
-        </table>
-        
-        <p>You you can also send us a message here:</p>
-        <form action="/action_page.php" target="_blank">
-          <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-          <p><input class="w3-input w3-padding-16" type="number" placeholder="How many people" required name="People"></p>
-          <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
-          <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
-          <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
-        </form>
-    </div>
-  </div>
-  
-  <!--<div class="w3-container w3-padding-64" id="contact">
+            <div class="w3-col m6 w3-padding-large">
+                <img src="https://i.imgur.com/dFbIx1O.jpg" class="w3-round w3-center w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+            </div>
+
+            <div class="w3-col m6 w3-padding-large">
+                <h1 class="w3-center">About Us</h1><br>
+                <h5 class="w3-center">Our tradition since 2005</h5>
+                <p class="w3-large">Our restaurant was founded in Detroit, Michigan by your name, Since the restuarant wsas founded, we have been serving Detroiters and visitors with nothing but <span class="w3-tag w3-light-grey">fresh</span> ingredients sourced from local farmers. We look forward welcoming you to our family</p>
+                <p class="w3-large w3-text-grey w3-hide-medium">Since we started we have been contributing to our comunity by....</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Menu Section -->
+        <div class="w3-row w3-padding-64" id="menu">
+
+            <div class="w3-col m6 w3-mobile w3-padding-large">
+                <h1 class="w3-center">Our Menu</h1><br>
+                <h4>Bread Basket</h4>
+                <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p>
+
+                <h4>Honey Almond Granola with Fruits</h4>
+                <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+
+                <h4>Belgian Waffle</h4>
+                <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p>
+
+                <h4>Scrambled eggs</h4>
+                <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
+
+                <h4>Blueberry Pancakes</h4>
+                <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
+                <br>
+                <p><button class="w3-button w3-light-grey w3-section w3-center">VIEW COMPLETE MENU</button></p>
+            </div>
+
+            <div class="w3-col m6 w3-mobile w3-padding-large w3-center">
+                <img src="https://i.imgur.com/8fTM158.jpg" class="w3-round w3-image w3-center w3-opacity-min" alt="Menu" style="width:100%">
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Contact Section -->
+        <div class="w3-row w3-padding-64" id="contact">
+
+            <div class="w3-col m6 w3-padding-large w3-mobile">
+
+
+                <div class="google-maps">
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2052.751904875937!2d-83.04762080473643!3d42.33163422278227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d3026939623%3A0x4f5c273e480fd763!2sThe%20Rink%20At%20Campus%20Martius%20Park!5e1!3m2!1sen!2sus!4v1611554587490!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                </div>
+                <!--<div class="mapouter"><div class="gmap_canvas"><iframe width="502" height="752" id="gmap_canvas" src="https://maps.google.com/maps?q=1544%20E%20Lafayette%20St,%20Detroit,%20MI%2048207&t=k&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org">putlocker</a><br><style>.mapouter{position:relative;text-align:right;height:752px;width:502px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:752px;width:502px;}</style></div></div>-->
+            </div>
+
+            <div class="w3-col m6 w3-padding-large w3-mobile">
+                <h1>Contact</h1><br>
+                <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
+                <p class="w3-text-blue-grey w3-large"><b>restaurant, 555 lafayatte St, Detroit, MI 44444</b></p>
+                <p>You can contact us by phone <a href="tel:555-555-5555">(555) 555-5555</a> or email <a href="mailto: help@restaurant.com">help@restaurant.com</a>, or you can send us a message here:</p>
+
+                <h3>Hours:</h3>
+                <table>
+                    <tr>
+                        <th>Mon: </th>
+                        <td>&ensp;9am - 5pm</td>
+                    </tr>
+                    <tr>
+                        <th>Tue: </th>
+                        <td>&ensp;9am - 5pm</td>
+                    </tr>
+                    <tr>
+                        <th>Wed: </th>
+                        <td>&ensp;9am - 5pm</td>
+                    </tr>
+                    <tr>
+                        <th>Thu: </th>
+                        <td>&ensp;9am - 5pm</td>
+                    </tr>
+                    <tr>
+                        <th>Fri: </th>
+                        <td>&ensp;9am - 5pm</td>
+                    </tr>
+                    <tr>
+                        <th>Sat: </th>
+                        <td>&ensp;9am - 5pm</td>
+                    </tr>
+                    <tr>
+                        <th>Sun: </th>
+                        <td>&ensp;Closed</td>
+                    </tr>
+                </table>
+
+                <p>You you can also send us a message here:</p>
+                <form action="/action_page.php" target="_blank">
+                    <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+                    <p><input class="w3-input w3-padding-16" type="number" placeholder="How many people" required name="People"></p>
+                    <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+                    <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+                    <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
+                </form>
+            </div>
+        </div>
+
+        <!--<div class="w3-container w3-padding-64" id="contact">
     <h1>Contact</h1><br>
     <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
     <p class="w3-text-blue-grey w3-large"><b>restaurant, 555 lafayatte St, Detroit, MI 44444</b></p>
@@ -286,51 +320,64 @@ function toggleFunction() {
       <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
     </form>
   </div>-->
-  
-<!-- End page content -->
-</div>
 
-<!-- Footer -->
-<footer class="w3-center w3-light-grey w3-center w3-padding-32">
-    <div class="w3-light-grey w3-row w3-center" style="width:100%">
-        <div class="w3-third w3-mobile w3-center" style="padding-left:64px;padding-right:64px">
-            <h4>Why choose our restaurant?</h4>
-            <p>We cook every dish with care and the finest ingredients available around town. We use only organic and the finest indgrediands.</p>
-        </div>
-        <div class="w3-third w3-mobile w3-center" style="padding-left:64px;padding-right:64px">
-            <ul style="list-style-type:none;" class="w3-center">
-                <li class="w3-center">
+        <!-- End page content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-center w3-padding-32">
+        <div class="w3-light-grey w3-row w3-center" style="width:100%;padding-left: 64px;padding-right: 64px;">
+            <div class="w3-third w3-mobile w3-center" style="padding-left:64px;padding-right:64px">
+                <h4>Why choose our restaurant?</h4>
+                <p>We cook every dish with care and the finest ingredients available around town. We use only organic and the finest indgrediands.</p>
+            </div>
+            <div class="w3-third w3-mobile w3-center" style="padding-left:64px;padding-right:64px">
+                <ul style="list-style-type: none;padding: 0;margin: 0" class="w3-center">
+                    <li class="w3-center">
                         <a href="/pages/contact-us">
-                        Contact Us
-                    </a>
-                </li>
-                <li class="w3-center">
-                    <a href="/policies/refund-policy">
-                        Refund Policy
-                    </a>
-                </li>
-                <li class="w3-center">
-                    <a href="/policies/terms-of-service">
-                        Terms of Service
-                    </a>
-                </li>
-                <li class="w3-center">
-                    <a href="/policies/privacy-policy">
-                        Privacy Policy
-                    </a>
-                </li>
-            </ul>    
-        </div>
-        <div class="w3-third w3-mobile w3-center" style="padding-left:64px;padding-right:64px">
-            <h3>News Letter:</h3>
+                            Contact Us
+                        </a>
+                    </li>
+                    <li class="w3-center">
+                        <a href="/policies/refund-policy">
+                            Refund Policy
+                        </a>
+                    </li>
+                    <li class="w3-center">
+                        <a href="/policies/terms-of-service">
+                            Terms of Service
+                        </a>
+                    </li>
+                    <li class="w3-center">
+                        <a href="/policies/privacy-policy">
+                            Privacy Policy
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="w3-third w3-mobile w3-center" style="padding-left:64px;padding-right:64px">
+                <h3>News Letter:</h3>
                 <form action="/action_page.php" target="_blank">
-              <p><input class="w3-input" type="Email" placeholder="Email Address" required name="Email"> <button class="w3-button w3-light-grey" type="submit">SUBSCRIBE</button></p>
-            </form>
+                    <p><input class="w3-input" type="Email" placeholder="Email Address" required name="Email"> <button class="w3-button w3-light-grey" type="submit">SUBSCRIBE</button></p>
+                </form>
+            </div>
         </div>
-</div>
-</footer>
+        <hr>
+        <div class="w3-light-grey w3-row w3-center" style="width:100%;padding-left: 64px;padding-right: 64px;">
+            <div class="w3-row w3-center">
+                <p>
+                    <i class="fa fa-facebook-official"  style="font-size:36px"> </i> 
+                    <i class="fa fa-instagram"          style="font-size:36px"> </i> 
+                    <i class="fa fa-snapchat-square"    style="font-size:36px"> </i> 
+                    <i class="fa fa-google"             style="font-size:36px"> </i> 
+                    <i class="fa fa-yelp"               style="font-size:36px"> </i> 
+                </p>
+            </div>
+        </div>
+    </footer>
 
 
-    
+
 </body>
+
 </html>
