@@ -69,6 +69,21 @@ th {
       color: white;
     }
 }
+    
+.google-maps {
+        position: relative;
+        padding-bottom: 185%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+
+.google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }    
 </style>
 <body>
 
@@ -220,7 +235,14 @@ function toggleFunction() {
   <div class="w3-row w3-padding-64" id="contact">
       
     <div class="w3-col m6 w3-padding-large w3-mobile">
-        <div class="mapouter"><div class="gmap_canvas"><iframe width="502" height="752" id="gmap_canvas" src="https://maps.google.com/maps?q=1544%20E%20Lafayette%20St,%20Detroit,%20MI%2048207&t=k&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org">putlocker</a><br><style>.mapouter{position:relative;text-align:right;height:752px;width:502px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:752px;width:502px;}</style></div></div>
+ 
+
+<div class="google-maps">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2052.751904875937!2d-83.04762080473643!3d42.33163422278227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d3026939623%3A0x4f5c273e480fd763!2sThe%20Rink%20At%20Campus%20Martius%20Park!5e1!3m2!1sen!2sus!4v1611554587490!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+</div>        
+        <!--<div class="mapouter"><div class="gmap_canvas"><iframe width="502" height="752" id="gmap_canvas" src="https://maps.google.com/maps?q=1544%20E%20Lafayette%20St,%20Detroit,%20MI%2048207&t=k&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org">putlocker</a><br><style>.mapouter{position:relative;text-align:right;height:752px;width:502px;}</style><a href="https://www.embedgooglemap.net"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:752px;width:502px;}</style></div></div>-->
     </div>
 
     <div class="w3-col m6 w3-padding-large w3-mobile">
@@ -273,7 +295,7 @@ function toggleFunction() {
     <div class="w3-light-grey w3-row w3-center" style="width:100%">
         <div class="w3-third w3-mobile w3-center" style="padding-left:64px;padding-right:64px">
             <h4>Why choose our restaurant?</h4>
-            <p>Scented Bundles handcrafts every candle with care and the finest ingredients available on the market. We use&nbsp;only toxic-free soy wax, and fragrances.&nbsp;</p>
+            <p>We cook every dish with care and the finest ingredients available around town. We use only organic and the finest indgrediands.</p>
         </div>
         <div class="w3-third w3-mobile w3-center" style="padding-left:64px;padding-right:64px">
             <ul style="list-style-type:none;" class="w3-center">
